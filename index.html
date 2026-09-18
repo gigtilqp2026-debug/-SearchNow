@@ -1,13 +1,110 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SearchNow</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نموذج تجريبي</title>
+
+<style>
+body{
+    background:#f5f5f7;
+    font-family:Tahoma, Arial;
+    margin:0;
+    padding:20px;
+}
+
+.container{
+    max-width:450px;
+    margin:auto;
+    background:#fff;
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.sub{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.group{
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-size:18px;
+}
+
+input, textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+textarea{
+    height:90px;
+}
+
+.code-box{
+    display:flex;
+    gap:10px;
+}
+
+button{
+    background:#0071e3;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:0.9;
+}
+</style>
 </head>
 
 <body>
-  <h1>SearchNow</h1>
-  <p>مرحباً بك في SearchNow</p>
+
+<div class="container">
+    <h1>نموذج تجريبي</h1>
+    <div class="sub">واجهة تصميم فقط</div>
+
+    <div class="group">
+        <label>البريد الإلكتروني</label>
+        <input type="email" placeholder="example@email.com">
+    </div>
+
+    <div class="group">
+        <label>كلمة المرور</label>
+        <input type="password" placeholder="********">
+    </div>
+
+    <div class="group">
+        <label>الرمز</label>
+        <div class="code-box">
+            <input type="text" placeholder="أدخل الرمز">
+            <button>الحصول على رمز</button>
+        </div>
+    </div>
+
+    <div class="group">
+        <label>ملاحظات</label>
+        <textarea placeholder="اكتب ملاحظتك"></textarea>
+    </div>
+</div>
+
 </body>
 </html>
