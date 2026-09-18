@@ -3,107 +3,189 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>نموذج تجريبي</title>
+
+<title>حساب المتجر</title>
 
 <style>
-body{
-    background:#f5f5f7;
-    font-family:Tahoma, Arial;
-    margin:0;
-    padding:20px;
+*{
+    box-sizing:border-box;
 }
 
-.container{
-    max-width:450px;
-    margin:auto;
-    background:#fff;
-    border-radius:25px;
-    padding:30px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+body{
+    margin:0;
+    background:#f5f5f7;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;
+    color:#1d1d1f;
+}
+
+.page{
+    max-width:520px;
+    margin:35px auto;
+    padding:18px;
+}
+
+.logo{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:8px;
 }
 
 h1{
     text-align:center;
-    margin-bottom:10px;
+    font-size:30px;
+    margin:5px 0 8px;
+    font-weight:700;
 }
 
-.sub{
+.subtitle{
     text-align:center;
-    color:#666;
-    margin-bottom:30px;
+    color:#6e6e73;
+    font-size:16px;
+    margin-bottom:25px;
+}
+
+.card{
+    background:white;
+    border-radius:25px;
+    padding:28px 24px;
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+.notice{
+    background:#f2f2f7;
+    border-radius:15px;
+    padding:18px;
+    margin-bottom:25px;
+    line-height:1.8;
+}
+
+.notice-title{
+    font-weight:700;
+    font-size:18px;
+    margin-bottom:6px;
 }
 
 .group{
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
 label{
     display:block;
+    font-size:17px;
+    font-weight:600;
     margin-bottom:8px;
-    font-size:18px;
 }
 
 input, textarea{
     width:100%;
-    padding:15px;
-    border:1px solid #ccc;
-    border-radius:10px;
+    border:1px solid #d2d2d7;
+    border-radius:12px;
+    padding:14px;
     font-size:16px;
-    box-sizing:border-box;
+    outline:none;
+    background:#fff;
 }
 
-textarea{
-    height:90px;
+input:focus, textarea:focus{
+    border-color:#0071e3;
+    box-shadow:0 0 0 3px rgba(0,113,227,.12);
 }
 
-.code-box{
+.code-row{
     display:flex;
-    gap:10px;
+    gap:8px;
 }
 
-button{
+.code-row input{
+    flex:1;
+}
+
+.code-btn{
+    border:0;
+    border-radius:12px;
     background:#0071e3;
     color:white;
-    border:none;
-    padding:15px;
-    border-radius:10px;
+    padding:0 16px;
+    font-size:15px;
     cursor:pointer;
 }
 
-button:hover{
-    opacity:0.9;
+.note{
+    background:#fff8e1;
+    border:1px solid #f0df9a;
+    border-radius:15px;
+    padding:17px;
+    line-height:1.9;
+    font-size:15px;
+    color:#444;
+}
+
+.demo{
+    text-align:center;
+    color:#86868b;
+    font-size:12px;
+    margin-top:18px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-    <h1>نموذج تجريبي</h1>
-    <div class="sub">واجهة تصميم فقط</div>
+<div class="page">
 
-    <div class="group">
-        <label>البريد الإلكتروني</label>
-        <input type="email" placeholder="example@email.com">
+    <div class="logo"></div>
+
+    <h1>حساب المتجر</h1>
+
+    <div class="subtitle">
+        لتحميل البرامج والألعاب
     </div>
 
-    <div class="group">
-        <label>كلمة المرور</label>
-        <input type="password" placeholder="********">
-    </div>
+    <div class="card">
 
-    <div class="group">
-        <label>الرمز</label>
-        <div class="code-box">
-            <input type="text" placeholder="أدخل الرمز">
-            <button>الحصول على رمز</button>
+        <div class="notice">
+            <div class="notice-title">⚠️ تنويه هام</div>
+            حساب المتجر مخصص لتحميل البرامج والألعاب.
         </div>
+
+        <div class="group">
+            <label>البريد الإلكتروني</label>
+            <input type="email" placeholder="أدخل البريد الإلكتروني">
+        </div>
+
+        <div class="group">
+            <label>كلمة المرور</label>
+            <input type="password" placeholder="أدخل كلمة المرور">
+        </div>
+
+        <div class="group">
+            <label>الرمز</label>
+
+            <div class="code-row">
+                <input type="text" placeholder="أدخل الرمز">
+                <button class="code-btn" type="button">
+                    الحصول على رمز
+                </button>
+            </div>
+        </div>
+
+        <div class="group">
+            <label>ملاحظة</label>
+
+            <div class="note">
+                يجب ربط الحساب برقم الهاتف الشخصي (العراقي)
+                خلال مدة أقصاها عشرة أيام من تاريخ التفعيل.
+                <br><br>
+                يُرجى الاحتفاظ بمعلومات الحساب في مكان آمن لتجنب فقدان المعلومات.
+            </div>
+        </div>
+
     </div>
 
-    <div class="group">
-        <label>ملاحظات</label>
-        <textarea placeholder="اكتب ملاحظتك"></textarea>
+    <div class="demo">
+        واجهة تجريبية للتصميم فقط
     </div>
+
 </div>
 
 </body>
