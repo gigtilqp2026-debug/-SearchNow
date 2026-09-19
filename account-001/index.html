@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>المتجر سرچنال</title>
+
+<title>المتجر سرچنال | معلومات الحساب</title>
 
 <style>
 *{
@@ -12,120 +13,163 @@
 
 body{
   margin:0;
+  min-height:100vh;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;
-  background:linear-gradient(180deg,#f5f5f7,#ffffff);
-  color:#1d1d1f;
+  background:
+    radial-gradient(circle at top,#dfe9ff 0,#f5f7fb 38%,#fff 75%);
+  color:#111827;
 }
 
 .container{
-  max-width:620px;
-  margin:45px auto;
-  padding:20px;
+  width:min(680px,92%);
+  margin:40px auto;
 }
 
 .header{
   text-align:center;
-  margin-bottom:28px;
-}
-
-.logo{
-  width:68px;
-  height:68px;
-  margin:auto;
-  border-radius:18px;
-  background:#111;
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:30px;
-  font-weight:700;
-  box-shadow:0 8px 25px #0002;
-}
-
-h1{
-  margin:18px 0 8px;
-  font-size:30px;
-}
-
-.subtitle{
-  color:#6e6e73;
-  font-size:18px;
-}
-
-.card{
-  background:#fff;
-  border-radius:24px;
-  padding:28px;
-  box-shadow:0 10px 35px #00000012;
-  border:1px solid #eee;
-}
-
-.title{
-  text-align:center;
-  font-size:22px;
-  font-weight:700;
   margin-bottom:25px;
 }
 
-label{
-  display:block;
-  margin:18px 4px 8px;
+.logo{
+  width:76px;
+  height:76px;
+  margin:auto;
+  border-radius:22px;
+  background:linear-gradient(145deg,#111827,#374151);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+  box-shadow:0 15px 35px #0002;
+}
+
+h1{
+  margin:18px 0 7px;
+  font-size:29px;
+}
+
+.subtitle{
+  color:#6b7280;
+  font-size:16px;
+}
+
+.card{
+  background:#ffffffdd;
+  backdrop-filter:blur(15px);
+  border:1px solid #ffffff;
+  border-radius:28px;
+  padding:28px;
+  box-shadow:0 20px 55px #17255414;
+}
+
+.card-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:25px;
+}
+
+.icon{
+  width:45px;
+  height:45px;
+  border-radius:14px;
+  background:#f1f5f9;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:21px;
+}
+
+.card-title h2{
+  margin:0;
+  font-size:20px;
+}
+
+.card-title p{
+  margin:4px 0 0;
+  color:#6b7280;
+  font-size:13px;
+}
+
+.info{
+  display:grid;
+  gap:14px;
+}
+
+.item{
+  background:#f8fafc;
+  border:1px solid #e5e7eb;
+  border-radius:17px;
+  padding:17px;
+}
+
+.label{
+  color:#6b7280;
+  font-size:13px;
+  margin-bottom:7px;
+}
+
+.value{
+  font-size:17px;
+  font-weight:600;
+  word-break:break-word;
+}
+
+.status{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:7px 12px;
+  border-radius:999px;
+  background:#ecfdf5;
+  color:#047857;
+  font-size:13px;
   font-weight:600;
 }
 
-.input{
-  width:100%;
-  padding:15px;
-  border:1px solid #d2d2d7;
-  border-radius:13px;
-  font-size:16px;
-  outline:none;
-  background:#fafafa;
-}
-
-.input:focus{
-  border-color:#777;
-  background:white;
-}
-
-.code-row{
-  display:flex;
-  gap:8px;
-}
-
-.code-row .input{
-  flex:1;
-}
-
-.demo-button{
-  border:0;
-  border-radius:12px;
-  padding:0 18px;
-  background:#111;
-  color:white;
-  font-size:15px;
+.dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#10b981;
 }
 
 .notice{
-  margin-top:25px;
+  margin-top:20px;
   padding:18px;
-  background:#f5f5f7;
-  border-radius:16px;
-  line-height:1.8;
-  color:#555;
+  border-radius:18px;
+  background:#f8fafc;
+  border:1px solid #e5e7eb;
+  line-height:1.9;
+  color:#4b5563;
   font-size:14px;
 }
 
-.date{
-  margin-top:20px;
+.notice strong{
+  color:#111827;
 }
 
 .footer{
   text-align:center;
-  margin-top:25px;
-  color:#888;
-  font-size:13px;
+  margin-top:24px;
+  color:#9ca3af;
+  font-size:12px;
+}
+
+@media(max-width:500px){
+  .container{
+    margin:25px auto;
+  }
+
+  .card{
+    padding:20px;
+    border-radius:23px;
+  }
+
+  h1{
+    font-size:25px;
+  }
 }
 </style>
 </head>
@@ -141,60 +185,64 @@ label{
     <h1>المتجر سرچنال</h1>
 
     <div class="subtitle">
-      حسابات متجر التطبيقات
+      معلومات حساب متجر التطبيقات
     </div>
 
   </div>
 
   <div class="card">
 
-    <div class="title">
-      معلومات الحساب
+    <div class="card-title">
+
+      <div class="icon">👤</div>
+
+      <div>
+        <h2>معلومات الحساب</h2>
+        <p>تفاصيل الحساب والتفعيل</p>
+      </div>
+
     </div>
 
-    <label>البريد الإلكتروني</label>
-    <input class="input"
-           type="text"
-           placeholder="أدخل البريد الإلكتروني">
+    <div class="info">
 
-    <label>كلمة المرور</label>
-    <input class="input"
-           type="password"
-           placeholder="أدخل كلمة المرور">
+      <div class="item">
+        <div class="label">البريد الإلكتروني</div>
+        <div class="value">example@email.com</div>
+      </div>
 
-    <label>الحصول على رمز</label>
+      <div class="item">
+        <div class="label">حالة الحساب</div>
+        <div class="status">
+          <span class="dot"></span>
+          الحساب مفعّل
+        </div>
+      </div>
 
-    <div class="code-row">
-      <input class="input"
-             type="text"
-             placeholder="رمز التحقق"
-             inputmode="numeric">
+      <div class="item">
+        <div class="label">تاريخ التفعيل</div>
+        <div class="value">2026/09/19</div>
+      </div>
 
-      <button class="demo-button"
-              type="button">
-        الحصول على رمز
-      </button>
+      <div class="item">
+        <div class="label">رقم الحساب</div>
+        <div class="value">ACCOUNT-001</div>
+      </div>
+
     </div>
 
     <div class="notice">
-      <strong>ملاحظة</strong><br>
-      يجب ربط الحساب برقم الهاتف الشخصي (العراقي)
-      خلال مدة أقصاها عشرة أيام من تاريخ التفعيل.
+      <strong>ملاحظة مهمة</strong><br>
+      يرجى الحفاظ على معلومات الحساب بشكل آمن،
+      وعدم مشاركة بيانات الدخول أو رموز التحقق مع أي شخص.
       <br><br>
-      يُرجى الاحتفاظ بمعلومات الحساب بشكل آمن
-      لتجنب فقدان المعلومات.
-    </div>
-
-    <div class="date">
-      <label>تاريخ التفعيل</label>
-      <input class="input"
-             type="date">
+      يجب ربط الحساب برقم الهاتف الشخصي العراقي
+      خلال المدة المحددة من تاريخ التفعيل.
     </div>
 
   </div>
 
   <div class="footer">
-    © المتجر سرچنال
+    © 2026 المتجر سرچنال
   </div>
 
 </div>
